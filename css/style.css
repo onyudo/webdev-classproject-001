@@ -61,22 +61,24 @@ hr {
 	height: auto;
 	padding-top: 50px;
 	padding-top: 50px;
+	min-width: 450px;
 }
 
 .container {
-	padding: 0;
-	margin: 0 auto;
-	width: 100%;
-	min-width: 300px;
+	padding: 3em;
+	width: 85%;
+  	max-width: 1000px;
 	display: flex;
 	justify-content: center;
+	align-content: center;
+	border: 2px solid #ffffff;
 }
 
 .quote {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: 2px solid #ffffff;
 }
 
 .quote:before {
@@ -87,15 +89,13 @@ hr {
   
 .quote:after {
 	content: close-quote;
-	align-self: flex-end;
 	color: #ffffff;
+	align-self: flex-end;
 }
 
 .quote:before,
 .quote:after {
   	font-size: 8em;
-  	top: .2em;
-  	position: relative;
 }
 
 q::before {
@@ -107,7 +107,7 @@ q::after {
 }
 
 .random-quote {
-	font-size: 2em;
+	font-size: 1.95em;
 	text-align: center;
 	color: #ffffff;
 	padding-bottom: 1em;
@@ -124,10 +124,10 @@ q::after {
 
 @media (min-width: 699px) {
 
-	.container {
+	/*.container {
 		width: 100%;
 		max-width: 650px;
-	}
+	}*/
 
 
 }
@@ -135,13 +135,13 @@ q::after {
 /* Desktop Media Query */
 @media (min-width: 999px) {
 
-	.container {
+	/*.container {
 		width: 100%;
 		max-width: 1000px;
 	}
 
 	.quote {
 		padding: 15em;
-	}
+	}*/
 
 }
