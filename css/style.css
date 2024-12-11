@@ -10,7 +10,10 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 1.6;
-	background-color: #f9f9f9;
+	background: radial-gradient(
+		at top,
+		#A42E6F, #011C2D 
+	  )
 }
 
 h1,
@@ -51,24 +54,94 @@ hr {
 
 /* Layout */
 
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	padding-top: 50px;
+	padding-top: 50px;
+}
+
 .container {
 	padding: 0;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1000px;
+	min-width: 300px;
+	display: flex;
+	justify-content: center;
+}
+
+.quote {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid #ffffff;
+}
+
+.quote:before {
+	content: open-quote;
+	align-self: flex-start;
+	color: #ffffff;
+}
+  
+.quote:after {
+	content: close-quote;
+	align-self: flex-end;
+	color: #ffffff;
+}
+
+.quote:before,
+.quote:after {
+  	font-size: 8em;
+  	top: .2em;
+  	position: relative;
+}
+
+q::before {
+	content: none;
+}
+
+q::after {
+	content: none;
+}
+
+.random-quote {
+	font-size: 2em;
+	text-align: center;
+	color: #ffffff;
+	padding-bottom: 1em;
+}
+
+.source {
+	text-transform: uppercase;
+	font-style: normal;
+	color: #ffffff;
+	text-align: center;
 }
 
 /* Media Queries */
 
 @media (min-width: 699px) {
 
-	/* CSS HERE */
+	.container {
+		width: 100%;
+		max-width: 650px;
+	}
+
 
 }
 
 /* Desktop Media Query */
 @media (min-width: 999px) {
 
-	/* CSS HERE */
+	.container {
+		width: 100%;
+		max-width: 1000px;
+	}
+
+	.quote {
+		padding: 15em;
+	}
 
 }
