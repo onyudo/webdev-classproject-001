@@ -81,29 +81,24 @@ hr {
 	align-items: center;
 }
 
-.quote:before {
+.quote::before {
 	content: open-quote;
 	align-self: flex-start;
-	color: #ffffff;
 }
   
-.quote:after {
+.quote::after {
 	content: close-quote;
-	color: #ffffff;
 	align-self: flex-end;
 }
 
-.quote:before,
-.quote:after {
+.quote::before,
+.quote::after {
   	font-size: 8em;
 	line-height: 1;
+	color: #ffffff;
 }
 
-q::before {
-	content: none;
-}
-
-q::after {
+q::before, q::after  {
 	content: none;
 }
 
