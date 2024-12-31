@@ -14,16 +14,16 @@ const authorElement = document.getElementById("source");
 function getRandomQuote() {
 
     // randomly choose a quote from the array of quotes. The random # generator from the JS final is a starting point
-    // const randomIndex =
+    const randomIndex = Math.floor(Math.random() * quotes.length);
 
     // assign the randomly chosen quote to another constant variable?
-    // const quote =
+    const quote = quotes[randomIndex];
 
     // use innerText to output quote to HTML document
-    // quoteElement.innerText = 
+    quoteElement.innerText = quote.quote;
 
     // user innerText to output author to HTML document
-    // authorElement.innerText =
+    authorElement.innerText = quote.author;
 }
 
 // render the randomly chosen quote and author combo to the HTML document
