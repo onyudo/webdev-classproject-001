@@ -15,7 +15,7 @@ const authorElement = document.getElementsByClassName("source")[0]; // Access th
 function getRandomQuote() {
 
     // randomly choose a quote from the array of quotes. The random # generator from the JS final is a starting point
-    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomIndex = Math.floor(Math.random() * quotes.length); // use length to count the number of quotes
 
     // assign the randomly chosen quote to another constant variable?
     const quote = quotes[randomIndex];
