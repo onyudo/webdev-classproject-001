@@ -7,8 +7,9 @@ const quotes = [
     // add more quotes here
 ];
 
-const quoteElement = document.getElementById("random-quote");
-const authorElement = document.getElementById("source");
+const quoteElement = document.getElementsByClassName("random-quote")[0]; // Access the first element of this class
+const authorElement = document.getElementsByClassName("source")[0]; // Access the first element of this class
+
 
 // function generate random quote
 function getRandomQuote() {
