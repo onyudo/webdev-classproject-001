@@ -27,6 +27,8 @@ function getRandomQuote() {
     authorElement.innerText = quote.author;
 }
 
+// Is there a way to have the quotes "play" for a short amount of time and rotate randomly?
+
 // render the randomly chosen quote and author combo to the HTML document
 // found this on Stack Overflow
 // This event fires when the entire page, including all dependent resources like images and stylesheets, has finished loading.
