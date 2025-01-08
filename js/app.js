@@ -15,9 +15,9 @@ const authorElement = document.getElementsByClassName("source")[0]; // Access th
 function getRandomQuote() {
 
     // randomly choose a quote from the array of quotes. The random # generator from the JS final is a starting point
-    const randomIndex = Math.floor(Math.random() * quotes.length); // use length to count the number of quotes
+    const randomIndex = Math.floor(Math.random() * quotes.length); // use length to count the number of quote indexes
 
-    // assign the randomly chosen quote to another constant variable?
+    // assign the randomly chosen index to another constant variable?
     const quote = quotes[randomIndex];
 
     // use innerText to output quote to HTML document
@@ -31,7 +31,7 @@ function getRandomQuote() {
 
 // render the randomly chosen quote and author combo to the HTML document
 // found this on Stack Overflow
-// This event fires when the entire page, including all dependent resources like images and stylesheets, has finished loading.
+// This event fires when the entire page, including all dependent resources like images and stylesheets, have finished loading.
 window.addEventListener('load', function() {
     getRandomQuote();
 });
