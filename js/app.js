@@ -10,7 +10,6 @@ const quotes = [
 const quoteElement = document.getElementsByClassName("random-quote")[0]; // Access the first element of this class
 const authorElement = document.getElementsByClassName("source")[0]; // Access the first element of this class
 
-
 // function generate random quote
 function getRandomQuote() {
 
@@ -29,9 +28,26 @@ function getRandomQuote() {
 
 // Is there a way to have the quotes "play" for a short amount of time and rotate randomly?
 
-// render the randomly chosen quote and author combo to the HTML document
+let currentQuoteIndex = 0;
+
+function cycleQuotes() {
+    // Display the current quote based on the current index
+    const quote = quotes[currentQuoteIndex];
+    quoteElement.innerText = quote.quote;
+    authorElement.innerText = `— ${quote.author}`;
+    
+    // Move to the next quote in the array
+    currentQuoteIndex++;
+
+    // If we reach the end of the array, reset the index to 0 (start over)
+    if (currentQuoteIndex >= quotes.length) {
+        currentQuoteIndex = 0;
+    }
+}
+
+// render and cycle through the randomly chosen quote and author combo to the HTML document
 // found this on Stack Overflow
-// This event fires when the entire page, including all dependent resources like images and stylesheets, have finished loading.
 window.addEventListener('load', function() {
-    getRandomQuote();
+    cycleQuotes(); // Display the first quote immediately
+    setInterval(cycleQuotes, 9000); // Rotate quotes every 9 seconds (9000 milliseconds)
 });
