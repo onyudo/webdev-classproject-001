@@ -26,8 +26,8 @@ function getRandomQuote() {
     authorElement.innerText = quote.author;
 }
 
-// Is there a way to have the quotes "play" for a short amount of time and rotate randomly?
-
+// Is there a way to have the quotes "play" for a short amount of time and rotate randomly? YES
+// Start the quote cycle at the first quote in the array
 let currentQuoteIndex = 0;
 
 function cycleQuotes() {
