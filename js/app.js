@@ -10,9 +10,17 @@ const quotes = [
 const quoteElement = document.getElementsByClassName("random-quote")[0]; // Access the first element of this class
 const authorElement = document.getElementsByClassName("source")[0]; // Access the first element of this class
 
+// render and cycle through the quotes and author combo to the HTML document
+// found this on Stack Overflow
+window.addEventListener('load', function() {
+    cycleQuotes(); // Display the first quote immediately
+    setInterval(cycleQuotes, 9000); // Rotate quotes every 9 seconds (9000 milliseconds)
+});
+
 /*
 // function generate random quote
 // IS THIS FUNCTION EVEN NEEDED ANYMORE?
+// Seems redundant, so I commented it out
 function getRandomQuote() {
 
     // randomly choose a quote from the array of quotes. The random # generator from the JS final is a starting point
@@ -29,29 +37,29 @@ function getRandomQuote() {
 }
 */
 
-
 // Is there a way to have the quotes "play" for a short amount of time and rotate randomly? YES
-// Start the quote cycle at the first quote in the array
-let currentQuoteIndex = 0;
-
+// Integrate the randomization from the getRandomQuote function above
 function cycleQuotes() {
-    // Display the current quote based on the current index
-    const quote = quotes[currentQuoteIndex];
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+
+    // Get the random quote
+    const quote = quotes[randomIndex];
+
+    // Display the quote and author
     quoteElement.innerText = quote.quote;
     authorElement.innerText = quote.author;
+}
     
+    /*
     // Move to the next quote in the array
+    // This is no longer needed
     currentQuoteIndex++;
 
     // If we reach the end of the array, reset the index to 0 (start over)
+    // This is no longer needed
     if (currentQuoteIndex >= quotes.length) {
         currentQuoteIndex = 0;
     }
 }
-
-// render and cycle through the quotes and author combo to the HTML document
-// found this on Stack Overflow
-window.addEventListener('load', function() {
-    cycleQuotes(); // Display the first quote immediately
-    setInterval(cycleQuotes, 9000); // Rotate quotes every 9 seconds (9000 milliseconds)
-});
+*/    
