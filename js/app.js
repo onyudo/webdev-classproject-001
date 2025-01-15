@@ -34,7 +34,7 @@ function cycleQuotes() {
     // Display the current quote based on the current index
     const quote = quotes[currentQuoteIndex];
     quoteElement.innerText = quote.quote;
-    authorElement.innerText = `${quote.author}`;
+    authorElement.innerText = quote.author;
     
     // Move to the next quote in the array
     currentQuoteIndex++;
