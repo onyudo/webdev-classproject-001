@@ -44,7 +44,7 @@ function cycleQuotes() {
     }
 
     // Generate a random index that hasn't been used yet
-    // If the random index has been used, the do...while loop will generate another one until it finds a one that hasn't been used.
+    // If the random index has been used, the do...while loop will generate another one until it finds one that hasn't been used.
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * quotes.length);
@@ -62,7 +62,7 @@ function cycleQuotes() {
     usedIndexes.push(randomIndex);
 }
     
-    /*
+/*
     // Move to the next quote in the array
     // This is no longer needed
     currentQuoteIndex++;
