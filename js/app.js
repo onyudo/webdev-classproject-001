@@ -45,7 +45,7 @@ function cycleQuotes() {
     }
 }
 
-// render and cycle through the randomly chosen quote and author combo to the HTML document
+// render and cycle through the quotes and author combo to the HTML document
 // found this on Stack Overflow
 window.addEventListener('load', function() {
     cycleQuotes(); // Display the first quote immediately
