@@ -10,7 +10,9 @@ const quotes = [
 const quoteElement = document.getElementsByClassName("random-quote")[0]; // Access the first element of this class
 const authorElement = document.getElementsByClassName("source")[0]; // Access the first element of this class
 
+/*
 // function generate random quote
+// IS THIS FUNCTION EVEN NEEDED ANYMORE?
 function getRandomQuote() {
 
     // randomly choose a quote from the array of quotes. The random # generator from the JS final is a starting point
@@ -25,6 +27,8 @@ function getRandomQuote() {
     // user innerText to output author to HTML document
     authorElement.innerText = quote.author;
 }
+*/
+
 
 // Is there a way to have the quotes "play" for a short amount of time and rotate randomly? YES
 // Start the quote cycle at the first quote in the array
