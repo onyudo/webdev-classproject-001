@@ -1,0 +1,16 @@
+{
+  "name": "webdev-classproject-001",
+  "version": "1.0.0",
+  "description": "## Class Project - Task 001",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Martin Otis",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "express": "^4.21.2"
+  }
+}

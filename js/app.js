@@ -48,7 +48,7 @@ function cycleQuotes() {
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * quotes.length);
-    } while (usedIndexes.includes(randomIndex)); // Keep generating a new random index until it's not used
+    } while (usedIndexes.includes(randomIndex)); // Keep generating a new random index until it's not been used
 
     // Get the random quote
     const quote = quotes[randomIndex];
